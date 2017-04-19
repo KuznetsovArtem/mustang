@@ -1,21 +1,26 @@
 /**
  * Created by artem on 4/19/17.
  */
-
 import React, { Component } from 'react';
-import { Provider, connect } from 'react-redux'
-import {Router} from 'react-native-router-flux';
-import store from './config/configStore';
-import scenes from './routes';
-
-const ConnectedRouter = connect()(Router);
+import {
+  Text,
+  View
+} from 'react-native';
+import styles from './styles';
+import WebApp from './Components/WebApp'
 
 export default class App extends Component {
   render() {
     return (
-      <Provider store={store}>
-        <ConnectedRouter scenes={scenes}/>
-      </Provider>
+      <View style={styles.container}>
+        <Text style={styles.welcome}>
+          Welcome to App!
+        </Text>
+        <View style={styles.container}>
+          <WebApp/>
+        </View>
+      </View>
     );
   }
 }
+
