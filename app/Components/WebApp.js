@@ -11,21 +11,28 @@ import {
   View,
   WebView
 } from 'react-native';
-import conf from '../config';
-import styles from '../styles';
 
 export default class WebApp extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     const WEBWIEW_NAME = 'webView';
+    const {url} = this.props;
 
     return (
       <View>
         <WebView
           ref={WEBWIEW_NAME}
-          source={{uri: conf.WEBAPP_URL}}
+          source={{uri: url}}
         />
       </View>
     );
   }
 }
+
+// WebApp.propTypes = {
+//   url: React.PropTypes.string.isRequired()
+// };
 

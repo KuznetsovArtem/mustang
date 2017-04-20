@@ -1,26 +1,17 @@
 /**
  * Created by artem on 4/19/17.
  */
-import React, { Component } from 'react';
+import React from 'react';
 import {
-  Text,
-  View
-} from 'react-native';
-import styles from './styles';
-import WebApp from './Components/WebApp'
+  StackNavigator,
+} from 'react-navigation';
 
-export default class App extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to App!
-        </Text>
-        <View style={styles.container}>
-          <WebApp/>
-        </View>
-      </View>
-    );
-  }
-}
+import Home from './Pages/Home';
+import Browser from './Pages/Browser'
 
+const App = StackNavigator({
+  Main: {screen: Home},
+  Browser: {screen: Browser},
+});
+
+export default App;

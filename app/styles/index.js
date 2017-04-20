@@ -21,6 +21,13 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  browserPage: {
+    marginTop: 15,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#aedaed',
+  }
 });
 
 export default styles;

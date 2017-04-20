@@ -3,7 +3,8 @@
  */
 
 const conf = {
-  WEBAPP_URL: 'https://github.com'
+  WEBAPP_URL: 'https://github.com',
+  WEBAPP_URL2: 'https://google.com'
 };
 
 export default conf;
